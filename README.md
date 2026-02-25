@@ -23,3 +23,5 @@ Throughput: Número de carros que passam pelo pedágio por minuto.
 # Lei de Moore
 // A Lei de Moore é uma observação feita por Gordon Moore em 1965, cofundador da Intel, que prevê que o número de transistores em um chip dobra aproximadamente a cada dois anos, aumentando a capacidade de processamento
 e reduzindo custos. Essa regra exponencial impulsionou a tecnologia por décadas, resultando em dispositivos menores, mais rápidos e eficientes.
+
+#
