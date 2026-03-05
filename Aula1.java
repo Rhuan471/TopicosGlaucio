@@ -16,6 +16,8 @@ public class aula1 extends Thread {
         aula1 a1 = new aula1(x);
         a1.start();
         }
+        Thread.sleep(millis:500);
+        
         System.out.println("ok");
 }
 }
