@@ -31,4 +31,6 @@ e reduzindo custos. Essa regra exponencial impulsionou a tecnologia por décadas
  - Colunas (Campos/Atributos): Características do dado armazenado.
  - Chave Primária (PK): Identificador exclusivo para cada linha em uma tabela.
  - Chave Estrangeira (FK): Campo que vincula uma tabela a outra, criando um relacionamento.
- - SQL (Structured Query Language): Linguagem padrão para interagir com bancos relacionais. 
+ - SQL (Structured Query Language): Linguagem padrão para interagir com bancos relacionais.
+ - 
+// O SISTEMA OPERACIONAL NÃO SUPORTA UMA GRANDE QUANTIDADE DE THREADS
