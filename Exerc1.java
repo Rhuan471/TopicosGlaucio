@@ -1,3 +1,4 @@
+// Faça um programa concorrente que crie 10 threads que exibam o nome da thread e a hora atual.
 import java.util.Date;
 
 public class Exerc1 extends Thread {
