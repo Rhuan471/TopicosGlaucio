@@ -32,5 +32,10 @@ e reduzindo custos. Essa regra exponencial impulsionou a tecnologia por décadas
  - Chave Primária (PK): Identificador exclusivo para cada linha em uma tabela.
  - Chave Estrangeira (FK): Campo que vincula uma tabela a outra, criando um relacionamento.
  - SQL (Structured Query Language): Linguagem padrão para interagir com bancos relacionais.
- - 
-// O SISTEMA OPERACIONAL NÃO SUPORTA UMA GRANDE QUANTIDADE DE THREADS
+   
+# Diferença entre Stack e Heap
+- Stack: é automática, rápida e organizada em LIFO (último a entrar, primeiro a sair) para dados locais e pequenos.
+- Heap: O Heap é maior, de acesso mais lento, usado para alocação dinâmica e exige gerenciamento manual (C/C++) ou Garbage Collector (Java/C#).
+
+# O SISTEMA OPERACIONAL NÃO SUPORTA UMA GRANDE QUANTIDADE DE THREADS
+- 
