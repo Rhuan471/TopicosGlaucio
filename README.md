@@ -38,4 +38,7 @@ e reduzindo custos. Essa regra exponencial impulsionou a tecnologia por décadas
 - Heap: O Heap é maior, de acesso mais lento, usado para alocação dinâmica e exige gerenciamento manual (C/C++) ou Garbage Collector (Java/C#).
 
 # O SISTEMA OPERACIONAL NÃO SUPORTA UMA GRANDE QUANTIDADE DE THREADS
-- 
+- Embora o sistema operacional consiga gerenciar milhares de threads, cada thread consome recursos: 
+  - Memória RAM: Cada thread precisa de sua própria pilha (stack) de memória (geralmente cerca de 1 MB no Windows ou 8 MB no Linux por padrão). Criar milhares de threads pode esgotar a RAM, causando lentidão extrema (swap) ou travamento.
+  - Overhead de Context Switching: O sistema operacional precisa alternar rapidamente entre as threads para dar a ilusão de paralelismo. Trocar o contexto de muitas threads consome ciclos de CPU que poderiam ser usados para processar dados (custo de comutação).
+  - O sistema operacional não "não suporta", mas há um ponto de saturação. Criar threads demais frequentemente piora o desempenho em vez de melhorar. 
