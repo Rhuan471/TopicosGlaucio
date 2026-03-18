@@ -44,14 +44,14 @@ e reduzindo custos. Essa regra exponencial impulsionou a tecnologia por décadas
   - O sistema operacional "não suporta", mas há um ponto de saturação. Criar threads demais frequentemente piora o desempenho em vez de melhorar. 
 
 # Qual a diferença entre Thread de Plataforma (OS) e Thread Virtual (Coroutines)
- - Thread de Plataforma (OS):
+ - Thread de Plataforma (OS)
   - Mapeamento: Existe uma correspondência de um-para-um (1:1) com threads do SO.
   - Custo: Alto. Criar e destruir threads de plataforma é caro, e cada uma consome uma quantidade significativa de memória (geralmente ~1MB de pilha).
   - Escalabilidade: Limitada. Criar milhares de threads pode esgotar a memória do sistema.
   - Bloqueio: Se uma thread fizer uma operação bloqueante (como leitura de banco de dados ou rede), a thread do SO fica bloqueada e não pode fazer mais nada.
   - Uso Ideal: Tarefas pesadas de processamento (CPU-bound) que exigem núcleos de processador dedicados.
   
- - Thread Virtual (Coroutines):
+ - Thread Virtual (Coroutines)
   - Mapeamento: Mapeamento muitos-para-um (M:N). Milhões de threads virtuais podem ser mapeadas para um número pequeno de threads de plataforma (chamadas de carrier threads).
   - Custo: Baixo. São objetos Java leves criados na heap, não no SO. A criação é muito rápida.
   - Escalabilidade: Muito alta. Permite suportar milhões de tarefas simultâneas (concorrência) na mesma aplicação.
