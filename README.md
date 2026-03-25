@@ -32,10 +32,15 @@ e reduzindo custos. Essa regra exponencial impulsionou a tecnologia por décadas
  - Chave Primária (PK): Identificador exclusivo para cada linha em uma tabela.
  - Chave Estrangeira (FK): Campo que vincula uma tabela a outra, criando um relacionamento.
  - SQL (Structured Query Language): Linguagem padrão para interagir com bancos relacionais.
-   
-# Diferença entre Stack e Heap
-- Stack: é automática, rápida e organizada em LIFO (último a entrar, primeiro a sair) para dados locais e pequenos.
-- Heap: O Heap é maior, de acesso mais lento, usado para alocação dinâmica e exige gerenciamento manual (C/C++) ou Garbage Collector (Java/C#).
+
+// Thread: um fluxo de execução dentro do processo
+// Processo/thread deamon: processo ou thread que não tem fim
+
+# o que é Stack
+- A stack de thread (pilha de thread) é uma área de memória dedicada e privada usada por uma única thread de execução em um programa. Ela armazena dados temporários, como variáveis locais e o histórico de chamadas de funções (call stack).
+
+# O que é Heap
+- É uma área de memória compartilhada, dinâmica e de grande capacidade, utilizada para armazenar objetos, instâncias de classes e variáveis de tamanho desconhecido em tempo de compilação.
 
 # O SISTEMA OPERACIONAL NÃO SUPORTA UMA GRANDE QUANTIDADE DE THREADS
 - Embora o sistema operacional consiga gerenciar milhares de threads, cada thread consome recursos: 
