@@ -61,3 +61,7 @@ e reduzindo custos. Essa regra exponencial impulsionou a tecnologia por décadas
 # Diferença entre Paralelismo e Concorrência
 - Concorrência é a estruturação e gerenciamento de múltiplas tarefas que progridem em períodos sobrepostos (alternando entre elas), frequentemente em um único núcleo. 
 - Paralelismo é a execução física e simultânea de múltiplas tarefas ao mesmo tempo, exigindo múltiplos núcleos de CPU. A concorrência lida com várias coisas, o paralelismo faz várias coisas. 
+
+# Mutex e semáforo:
+- A principal diferença entre Mutex e Semáforo é que o Mutex é um mecanismo de bloqueio para exclusão mútua, permitindo apenas uma thread por vez em um recurso.
+- Semáforo tanto pode ser Mutex, por ele ser um mecanismo de sinalização que permite acesso controlado a múltiplas instâncias de um recurso (contagem).   
