@@ -26,7 +26,7 @@ e reduzindo custos. Essa regra exponencial impulsionou a tecnologia por décadas
 
 # Bancos de dados relacional
 // Um banco de dados relacional (RDBMS) organiza dados em tabelas com linhas (registros) e colunas (atributos) interligadas, utilizando chaves primárias e estrangeiras para garantir a consistência. Baseado em SQLé ideal para transações estruturadas (OLTP) que exigem alta precisão e integridade, como sistemas financeiros e de inventário.
- - Tabelas (Relações): Estruturas que armazenam dados de entidades específicas.
+ - Tabelas (Relações): Representam atributos (estruturas) que armazenam dados de entidades específicas.
  - Linhas (Registros/Tuplas): Cada entrada única em uma tabela.
  - Colunas (Campos/Atributos): Características do dado armazenado.
  - Chave Primária (PK): Identificador exclusivo para cada linha em uma tabela.
