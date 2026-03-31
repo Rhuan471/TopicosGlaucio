@@ -75,3 +75,14 @@ e reduzindo custos. Essa regra exponencial impulsionou a tecnologia por décadas
 # Mutex e semáforo:
 - Mutex é um mecanismo de bloqueio para exclusão mútua, permitindo apenas uma thread por vez em um recurso.
 - Semáforo tanto pode ser Mutex, por ele ser um mecanismo de sinalização que permite acesso controlado a múltiplas instâncias de um recurso (contagem).   
+
+# Escalonador Cooperativo e Preemptivo (time slice)
+- A principal diferença é o controle: no escalonamento preemptivo, o sistema operacional interrompe processos à força para dar vez a outros, garantindo responsividade. No cooperativo, o processo mantém a CPU até terminar ou ceder voluntariamente o controle, sendo ideal para sistemas embarcados simples, mas arriscado para multitarefa.
+
+# Curiosidade
+Processo: um programa em execução
+Thread: um fluxo de execução dentro do processo
+Stack: área de memoria da thread (variaveis locais e pilhas de chamada de funções)
+Processo/thread daemon: processo ou thread que não tem fim
+Prioridade na thread: valor informado ao escalonador para ele levar em conta
+Starvation: Thread que não consegue tempo de CPU
