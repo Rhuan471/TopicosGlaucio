@@ -37,8 +37,6 @@ e reduzindo custos. Essa regra exponencial impulsionou a tecnologia por décadas
  - O que é o Processo/thread deamon: que não tem fim.
  - Prioridade na thread: valor informado ao escalonador para ele levar em conta.
  - Starvation: Thread que não consegue tempo de CPU.
- - Prioridade na thread: valor informado ao escalonador para ele levar em conta.
- - Starvation: Thread que não consegue tempo de CPU.
 
 # O que é Condição de corrida:
 - O resultado final torna-se dependente da temporização imprevisível ("corrida") dos eventos, gerando comportamentos não determinísticos, corrupção de dados ou falhas de segurança
