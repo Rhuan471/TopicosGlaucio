@@ -43,8 +43,8 @@ e reduzindo custos. Essa regra exponencial impulsionou a tecnologia por décadas
 
 # o que é Stack
 - A stack de thread (pilha de thread) é uma área de memória dedicada e privada usada por uma única thread de execução em um programa. Ela armazena dados temporários, como variáveis locais e o histórico de chamadas de funções (call stack).
--  Diferença de Stack entre Threads (Multi-threading).
-  
+
+- Diferença de Stack entre Threads (Multi-threading).  
 Se um processo tem duas threads (Thread A e Thread B), cada uma possui sua própria stack física na memória, permitindo que executem funções diferentes simultaneamente sem interferência. 
 
 Thread A: Executa funcao_calculo().
