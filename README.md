@@ -33,10 +33,12 @@ e reduzindo custos. Essa regra exponencial impulsionou a tecnologia por décadas
  - Chave Estrangeira (FK): Campo que vincula uma tabela a outra, criando um relacionamento.
  - SQL (Structured Query Language): Linguagem padrão para interagir com bancos relacionais.
 
-// Thread: um fluxo de execução dentro do processo.
-// O que é o Processo/thread deamon: que não tem fim.
-// Prioridade na thread: valor informado ao escalonador para ele levar em conta.
-// Starvation: Thread que não consegue tempo de CPU.
+ Thread: um fluxo de execução dentro do processo.
+ - O que é o Processo/thread deamon: que não tem fim.
+ - Prioridade na thread: valor informado ao escalonador para ele levar em conta.
+ - Starvation: Thread que não consegue tempo de CPU.
+ - Prioridade na thread: valor informado ao escalonador para ele levar em conta.
+ - Starvation: Thread que não consegue tempo de CPU.
 
 # O que é Condição de corrida:
 - O resultado final torna-se dependente da temporização imprevisível ("corrida") dos eventos, gerando comportamentos não determinísticos, corrupção de dados ou falhas de segurança
@@ -83,6 +85,3 @@ e reduzindo custos. Essa regra exponencial impulsionou a tecnologia por décadas
 - Processo: um programa em execução
 - Thread: um fluxo de execução dentro do processo
 - Stack: área de memoria da thread (variaveis locais e pilhas de chamada de funções)
-- Processo/thread daemon: processo ou thread que não tem fim
-- Prioridade na thread: valor informado ao escalonador para ele levar em conta
-- Starvation: Thread que não consegue tempo de CPU
