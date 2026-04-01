@@ -5,13 +5,13 @@
 de tempo. Resumindo: latência é velocidade, throughput é capacidade. 
 
 Principais Diferenças e Características:
-Latência (Tempo/Atraso):
-Mede o tempo de ida e volta (RTT) de um pacote.
-Crucial para aplicações em tempo real (jogos, chamadas de vídeo, alto-frequência).
-Baixa latência significa resposta rápida.
-Throughput (Volume/Vazão):
-Mede a quantidade de dados por segundo (ex: MB/s) ou pacotes por segundo.
-Crucial para download, streaming, backups.
+ Latência (Tempo/Atraso)
+ Mede o tempo de ida e volta (RTT) de um pacote.
+ Crucial para aplicações em tempo real (jogos, chamadas de vídeo, alto-frequência).
+ Baixa latência significa resposta rápida.
+ Throughput (Volume/Vazão):
+ Mede a quantidade de dados por segundo (ex: MB/s) ou pacotes por segundo.
+ Crucial para download, streaming, backups.
 
 Relação e Trade-off:
 Embora distintos, alta latência pode reduzir o throughput. Otimizar para baixa latência (ex: sem cache) pode diminuir o throughput, e aumentar o throughput (ex: muitos pacotes em lote) pode aumentar a latência. 
