@@ -4,6 +4,11 @@
 // Latência é o atraso no tempo de resposta (ex: ping), medindo o tempo que um dado leva de um ponto a outro. Throughput é a taxa de transferência real, ou volume de dados entregues com sucesso por unidade
 de tempo. Resumindo: latência é velocidade, throughput é capacidade. 
 
+# Curiosidade
+- Processo: um programa em execução
+- Thread: um fluxo de execução dentro do processo
+- Stack: área de memoria da thread (variaveis locais e pilhas de chamada de funções)
+
 Principais Diferenças e Características:
  Latência (Tempo/Atraso)
  Mede o tempo de ida e volta (RTT) de um pacote.
@@ -86,7 +91,67 @@ Resultado: Os dados locais de funcao_calculo não misturam com os da funcao_inte
 # Escalonador Cooperativo e Preemptivo (time slice)
 - A principal diferença é o controle: no escalonamento preemptivo, o sistema operacional interrompe processos à força para dar vez a outros, garantindo responsividade. No cooperativo, o processo mantém a CPU até terminar ou ceder voluntariamente o controle, sendo ideal para sistemas embarcados simples, mas arriscado para multitarefa.
 
-# Curiosidade
-- Processo: um programa em execução
-- Thread: um fluxo de execução dentro do processo
-- Stack: área de memoria da thread (variaveis locais e pilhas de chamada de funções)
+# A Memorization (memoização)
+ - "do inglês memoization" é uma técnica de otimização usada em programação para acelerar o desempenho de aplicações, armazenando os resultados de chamadas de funções dispendiosas (pesadas) em um cache. 
+
+Quando a função é chamada novamente com as mesmas entradas, o programa retorna o resultado armazenado em vez de recalculá-lo. 
+
+Como funciona?
+Chamada da Função: A função recebe um argumento.
+Verificação do Cache: O programa verifica se o resultado para essa entrada já foi calculado e salvo em uma estrutura de dados (como um dicionário ou objeto).
+Retorno Cacheado: Se o resultado estiver no cache, ele é retornado instantaneamente.
+Novo Cálculo: Se não estiver, a função calcula o valor, armazena no cache e depois retorna. 
+
+Principais Características
+Ideal para Funções Puras: Funciona melhor com funções que, dado o mesmo argumento, sempre retornam o mesmo resultado.
+Troca Tempo por Espaço: Consome mais memória (para o cache) para ganhar velocidade de execução.
+Muito usada em Recursividade: Essencial para algoritmos recursivos repetitivos, como o cálculo da sequência de Fibonacci.
+Programação Dinâmica: É uma técnica fundamental na abordagem "de cima para baixo" (top-down) da programação dinâmica. 
+
+# Memória volátil 
+- é um tipo de armazenamento de computador que exige energia contínua para manter os dados, perdendo todas as informações armazenadas assim que o dispositivo é desligado ou reiniciado. É usada para acesso rápido e temporário de dados pelo processador (CPU), sendo essencial para o funcionamento de softwares ativos. 
+
+Principais características e usos:
+Velocidade: São muito mais rápidas que a memória não volátil (como HDs e SSDs).
+Exemplos: A memória RAM (Random Access Memory) é o principal exemplo, incluindo também a memória cache (L1, L2, L3).
+Finalidade em programação: Armazena variáveis, estruturas de dados e instruções de programas que estão em execução no momento.
+Vantagem: A volatilidade protege dados sensíveis, pois os apaga ao desligar, além de oferecer alto desempenho de leitura e escrita
+
+#Coerência de cache 
+- é a garantia de que múltiplos núcleos de CPU vejam a mesma versão de dados compartilhados, evitando dados "sujos" ou obsoletos. O protocolo MESI (Modified, Exclusive, Shared, Invalid) gerencia estados de cache para sincronizar escritas, assegurando que, quando um núcleo altera um dado, outros núcleos saibam. 
+
+# O que é o Protocolo MESI em Programação (Visão Geral)
+Em sistemas multi-core, cada núcleo tem sua própria cache (lenta se compartilhada, mas rápida localmente). Se dois núcleos lerem a mesma variável da RAM e um deles a alterar, o outro precisa ser notificado. O MESI gerencia isso usando quatro estados para cada linha de cache: 
+
+M (Modified - Modificado): O dado foi alterado na cache e é diferente da RAM. Apenas este núcleo possui a cópia atualizada.
+E (Exclusive - Exclusivo): O dado foi lido, é igual à RAM e está apenas na cache deste núcleo.
+S (Shared - Compartilhado): O dado é igual à RAM e pode existir em caches de outros núcleos.
+I (Invalid - Inválido): O dado na cache não é mais válido (outro núcleo alterou o valor). 
+
+Por que Importa para Programadores:
+A falta de coerência pode levar a resultados imprevisíveis, bugs de concorrência e falsos compartilhamentos (false sharing), onde núcleos diferentes tentam atualizar variáveis independentes que residem na mesma linha de cache, travando o desempenho. 
+
+Resumo Técnico:
+M: Modificado (único, sujo)
+E: Exclusivo (único, limpo)
+S: Compartilhado (pode ter múltiplos, limpo)
+I: Inválido (dado inválido)
+
+# O AtomicInteger
+ - é uma classe do Java (pacote java.util.concurrent.atomic) usada para realizar operações em um número inteiro de forma atômica e thread-safe (segura para uso em várias threads simultâneas) sem a necessidade de usar synchronized ou bloqueios explícitos. 
+
+Principais usos e funções:
+Contadores Seguros: Ideal para cenários onde várias threads precisam incrementar ou decrementar um contador ao mesmo tempo, garantindo que nenhum valor seja perdido.
+Operações Atômicas: Ele transforma operações compostas (que não são atômicas por padrão, como i++) em uma única etapa indivisível, utilizando mecanismos de hardware conhecidos como CAS (Compare-And-Swap).
+Performance (Lock-free): Por ser lock-free (livre de bloqueios), o AtomicInteger costuma ser mais rápido do que usar blocos synchronized, evitando que threads fiquem bloqueadas esperando a liberação de recursos.
+Visibilidade de Variável: Assegura que, quando uma thread atualiza o valor, todas as outras threads vejam o valor atualizado imediatamente. 
+
+Métodos comuns do AtomicInteger:
+incrementAndGet(): Incrementa e retorna o novo valor.
+getAndIncrement(): Retorna o valor atual e depois incrementa.
+decrementAndGet(): Decrementa e retorna o novo valor.
+addAndGet(int delta): Adiciona um valor específico e retorna o novo valor.
+compareAndSet(int expect, int update): Atualiza o valor apenas se o valor atual for igual ao valor esperado (útil para implementar locks personalizados)
+
+- [Opcional: VSCode Dapr Extension](https://www.baeldung.com/java-volatile)
+
