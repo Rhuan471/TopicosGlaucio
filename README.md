@@ -8,6 +8,7 @@ de tempo. Resumindo: latência é velocidade, throughput é capacidade.
 - Processo: um programa em execução
 - Thread: um fluxo de execução dentro do processo
 - Stack: área de memoria da thread (variaveis locais e pilhas de chamada de funções)
+- Na arquitetura de computadores, speedup é um número que mede o desempenho relativo de dois sistemas que processam o mesmo problema. 
 
 Principais Diferenças e Características:
  Latência (Tempo/Atraso)
