@@ -1,4 +1,4 @@
-package cozinha;
+package exercicio6;
 
 public class Lavador implements Runnable {
     private PilhaPratos sujos;
