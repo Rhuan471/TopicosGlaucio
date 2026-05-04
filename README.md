@@ -152,7 +152,17 @@ incrementAndGet(): Incrementa e retorna o novo valor.
 getAndIncrement(): Retorna o valor atual e depois incrementa.
 decrementAndGet(): Decrementa e retorna o novo valor.
 addAndGet(int delta): Adiciona um valor específico e retorna o novo valor.
-compareAndSet(int expect, int update): Atualiza o valor apenas se o valor atual for igual ao valor esperado (útil para implementar locks personalizados)
+compareAndSet(int expect, int update): Atualiza o valor apenas se o valor atual for igual ao valor esperado (útil para implementar locks personalizados).
+
+- Callabe: Codigo que executa em paralelo e dá um retorno
+- SingleThreadExecutor: Executa com uma thread
+- FixedThreadPool: Executa com um numero fico de threads
+- CachedThreadPool: Executa com um numero fixo de threads.
+- CachedThreadPool: Cria e reaproveita threads.
+- ThreadPerTaskExecutor: Cria uma thread pra cada tarefa. 
+- VirtualThreadPerTaskExecutor: Igual ao anterior só que com threads virtuais.
+- WorkStealingPool: Usa o algoritmo work-stealing (ele ocorre o roubo dentro desses algoritmos em listas encadeadas)
+
 
 - [Opcional: VSCode Dapr Extension](https://www.baeldung.com/java-volatile)
 
