@@ -155,6 +155,20 @@ addAndGet(int delta): Adiciona um valor específico e retorna o novo valor.
 compareAndSet(int expect, int update): Atualiza o valor apenas se o valor atual for igual ao valor esperado (útil para implementar locks personalizados).
 
 - Callabe: Codigo que executa em paralelo e dá um retorno
+```java
+Callable<String> tarefa = () -> {
+    // Lógica da tarefa
+    return "Resultado da execução";
+};
+
+ExecutorService executor = Executors.newFixedThreadPool(1);
+Future<String> resultado = executor.submit(tarefa);
+
+// Aguarda e obtém o resultado
+System.out.println(resultado.get());
+executor.shutdown();
+```
+
 - SingleThreadExecutor: Executa com uma thread
 - FixedThreadPool: Executa com um numero fico de threads
 - CachedThreadPool: Executa com um numero fixo de threads.
