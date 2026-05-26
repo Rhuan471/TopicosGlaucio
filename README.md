@@ -170,6 +170,39 @@ executor.shutdown();
 ```
 
 - SingleThreadExecutor: Executa com uma thread
+
+```java
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class ExemploSingleThread {
+    public static void main(String[] args) {
+        // Cria um executor com apenas uma thread
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+
+        // Submete 3 tarefas para execução
+        for (int i = 1; i <= 3; i++) {
+            int numeroTarefa = i;
+            executor.submit(() -> {
+                System.out.println("Iniciando a tarefa " + numeroTarefa + " na thread: " + Thread.currentThread().getName());
+                
+                // Simulando um processo que demora 1 segundo
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+                
+                System.out.println("Tarefa " + numeroTarefa + " concluída.");
+            });
+        }
+
+        // Encerra o executor após finalizar as tarefas
+        executor.shutdown();
+    }
+}
+```
+
 - FixedThreadPool: Executa com um numero fico de threads
 - CachedThreadPool: Executa com um numero fixo de threads.
 - CachedThreadPool: Cria e reaproveita threads.
